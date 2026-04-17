@@ -1,17 +1,32 @@
 # Linux DNS Troubleshooting Lab
 
-## Overview
-In this lab, I worked through DNS troubleshooting inside an Ubuntu virtual machine. The goal was to understand how Linux handles hostname resolution, DNS configuration, and connectivity testing.
+## 📌 Overview
+In this lab, I worked inside an Ubuntu VM to troubleshoot DNS resolution issues.
 
-## What I practiced
-- Troubleshooting DNS resolution issues
-- Editing `/etc/hosts`
-- Working with `/etc/resolv.conf`
-- Testing connectivity with `ping`
-- Distinguishing between network connectivity issues and DNS resolution issues
+## 🧪 Problem
+- Unable to resolve domain names (e.g., google.com)
+- Network connectivity was working (ping by IP worked)
 
-## Problem
-The system was unable to resolve `google.com`, resulting in:
+## 🔍 Troubleshooting Steps
+- Checked `/etc/resolv.conf`
+- Attempted to configure DNS using `resolvectl`
+- Verified hostname resolution in `/etc/hosts`
+- Restarted `systemd-resolved`
 
-```bash
-ping: google.com: Temporary failure in name resolution
+## ✅ Solution
+- Corrected DNS configuration
+- Ensured proper hostname resolution
+- Verified DNS functionality using `ping google.com`
+
+---
+
+## 📸 Screenshots
+
+### 🔴 Problem
+![Problem](linux-dns-troubleshooting/linux-dns-troubleshooting/screenshots/problem.png)
+
+### 🛠️ Troubleshooting
+![Work](linux-dns-troubleshooting/linux-dns-troubleshooting/screenshots/work.png)
+
+### ✅ Result
+![Result](linux-dns-troubleshooting/linux-dns-troubleshooting/screenshots/result.png)
